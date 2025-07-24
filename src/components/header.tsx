@@ -48,11 +48,6 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const whatsAppButtonClasses = cn(
-    "text-sm font-medium transition-colors flex items-center gap-2",
-    isScrolled || pathname !== '/' ? "text-foreground hover:text-primary" : "text-white hover:text-primary"
-  );
-
   return (
     <header className={cn(
       "sticky top-0 z-50 transition-all duration-300",
@@ -60,16 +55,17 @@ export function Header() {
     )}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <nav className="hidden md:flex items-center gap-6">
-            <Link
-                href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={whatsAppButtonClasses}
-                aria-label="Fale conosco no WhatsApp"
-            >
-                <WhatsAppIcon />
-                <span>(51) 8563-2393</span>
-            </Link>
+            <Button asChild variant="outline" className="border-white text-black bg-white/80 hover:bg-white">
+                <Link
+                    href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Fale conosco no WhatsApp"
+                >
+                    <WhatsAppIcon />
+                    <span>(51) 8563-2393</span>
+                </Link>
+            </Button>
           {navLinks.map((link) => (
             <Link 
               key={link.href} 

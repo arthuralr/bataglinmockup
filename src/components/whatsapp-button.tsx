@@ -23,18 +23,5 @@ export function WhatsAppButton() {
   const phoneNumber = "555185632393";
   const message = "Olá! Tenho interesse em um dos seus imóveis.";
 
-  return (
-    <Link
-      href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="fixed top-24 left-6 z-50 group"
-      aria-label="Fale conosco no WhatsApp"
-    >
-      <div className="flex items-center justify-center bg-primary text-primary-foreground rounded-full shadow-lg p-4 transition-all duration-300 ease-in-out hover:bg-primary/90">
-        <span className="font-semibold text-base pr-3">(51) 8563-2393</span>
-        <WhatsAppIcon />
-      </div>
-    </Link>
-  );
+  return null;
 }
