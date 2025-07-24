@@ -27,20 +27,25 @@ export default function Home() {
           <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 animate-fade-in-down">
             Encontre o imóvel dos seus sonhos
           </h1>
-          <p className="text-lg md:text-xl mb-8 max-w-2xl">
+          <p className="text-lg md:text-xl max-w-2xl">
             A Bataglin Imóveis tem as melhores opções para você e sua família.
           </p>
-          <Card className="w-full max-w-4xl p-4 sm:p-6 bg-white/20 backdrop-blur-sm border-none">
+        </div>
+      </section>
+
+      <section className="bg-background -mt-20 relative z-30">
+        <div className="container mx-auto px-4 md:px-6">
+          <Card className="w-full max-w-4xl mx-auto p-4 sm:p-6 shadow-lg">
             <CardContent className="p-0">
               <form className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
                 <div className="md:col-span-2">
-                  <label htmlFor="location" className="block text-sm font-medium mb-1">Localização ou Código</label>
-                  <Input id="location" placeholder="Digite bairro, cidade ou código..." className="text-foreground" />
+                  <label htmlFor="location" className="block text-sm font-medium mb-1 text-foreground">Localização ou Código</label>
+                  <Input id="location" placeholder="Digite bairro, cidade ou código..." />
                 </div>
                 <div>
-                   <label htmlFor="type" className="block text-sm font-medium mb-1">Tipo de Imóvel</label>
+                  <label htmlFor="type" className="block text-sm font-medium mb-1 text-foreground">Tipo de Imóvel</label>
                   <Select>
-                    <SelectTrigger id="type" className="w-full text-foreground">
+                    <SelectTrigger id="type" className="w-full">
                       <SelectValue placeholder="Todos os tipos" />
                     </SelectTrigger>
                     <SelectContent>
