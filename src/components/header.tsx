@@ -4,6 +4,7 @@ import React from "react"
 import Link from "next/link"
 import { Menu, Home } from "lucide-react"
 import { usePathname } from 'next/navigation'
+import Image from "next/image"
 
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
@@ -36,17 +37,6 @@ export function Header() {
       isScrolled || pathname !== '/' ? "bg-card shadow-md" : "bg-transparent"
     )}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="bg-primary p-2 rounded-md">
-            <Home className="h-6 w-6 text-primary-foreground" />
-          </div>
-          <span className={cn(
-            "text-xl font-bold font-headline transition-colors",
-            isScrolled || pathname !== '/' ? "text-foreground" : "text-white"
-          )}>
-            Bataglin Imóveis
-          </span>
-        </Link>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link 
@@ -62,6 +52,13 @@ export function Header() {
             </Link>
           ))}
         </nav>
+        
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <Link href="/" className="flex items-center gap-2">
+            <Image src="https://placehold.co/180x50" width={180} height={50} alt="Bataglin Imóveis Logo" data-ai-hint="logo" />
+            </Link>
+        </div>
+
         <div className="md:hidden">
           <Sheet>
             <SheetTrigger asChild>
@@ -69,7 +66,7 @@ export function Header() {
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
+            <SheetContent side="left">
               <div className="flex flex-col gap-6 p-6">
                 <Link href="/" className="flex items-center gap-2 mb-4">
                   <div className="bg-primary p-2 rounded-md">
