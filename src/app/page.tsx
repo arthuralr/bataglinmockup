@@ -35,13 +35,22 @@ export default function Home() {
 
       <section className="bg-background -mt-20 relative z-30">
         <div className="container mx-auto px-4 md:px-6">
-          <Card className="w-full max-w-4xl mx-auto p-4 sm:p-6 shadow-lg">
+          <Card className="w-full max-w-5xl mx-auto p-4 sm:p-6 shadow-lg">
             <CardContent className="p-0">
-              <form className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
-                <div className="md:col-span-2">
-                  <label htmlFor="location" className="block text-sm font-medium mb-1 text-foreground">Localização ou Código</label>
-                  <Input id="location" placeholder="Digite bairro, cidade ou código..." />
+              <form className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 items-end">
+                <div className="lg:col-span-2 xl:col-span-1">
+                  <label htmlFor="negocio" className="block text-sm font-medium mb-1 text-foreground">Negócio</label>
+                  <Select defaultValue="comprar">
+                    <SelectTrigger id="negocio" className="w-full">
+                      <SelectValue placeholder="Comprar ou Alugar?" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="comprar">Comprar</SelectItem>
+                      <SelectItem value="alugar">Alugar</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
+                
                 <div>
                   <label htmlFor="type" className="block text-sm font-medium mb-1 text-foreground">Tipo de Imóvel</label>
                   <Select>
@@ -49,16 +58,38 @@ export default function Home() {
                       <SelectValue placeholder="Todos os tipos" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="apartamento">Apartamento</SelectItem>
                       <SelectItem value="casa">Casa</SelectItem>
-                      <SelectItem value="cobertura">Cobertura</SelectItem>
                       <SelectItem value="terreno">Terreno</SelectItem>
+                      <SelectItem value="chacara">Chácara</SelectItem>
+                      <SelectItem value="sala">Sala</SelectItem>
+                      <SelectItem value="loja">Loja</SelectItem>
+                      <SelectItem value="sobrado">Sobrado</SelectItem>
+                      <SelectItem value="predio">Prédio</SelectItem>
+                      <SelectItem value="pavilhao">Pavilhão/Galpão</SelectItem>
+                      <SelectItem value="area-rural">Área Rural</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
-                <Button type="submit" className="w-full h-10 bg-primary hover:bg-accent hover:text-accent-foreground text-primary-foreground">
+                
+                 <div>
+                  <label htmlFor="city" className="block text-sm font-medium mb-1 text-foreground">Cidade</label>
+                  <Input id="city" placeholder="Digite a cidade" />
+                </div>
+
+                <div className="grid grid-cols-2 gap-2">
+                    <div>
+                      <label htmlFor="min-price" className="block text-sm font-medium mb-1 text-foreground">Valor Mínimo</label>
+                      <Input id="min-price" placeholder="R$ 0" type="number" />
+                    </div>
+                     <div>
+                      <label htmlFor="max-price" className="block text-sm font-medium mb-1 text-foreground">Valor Máximo</label>
+                      <Input id="max-price" placeholder="R$ 1.000.000+" type="number" />
+                    </div>
+                </div>
+
+                <Button type="submit" className="w-full h-10 bg-primary hover:bg-accent hover:text-accent-foreground text-primary-foreground md:col-start-2 lg:col-start-auto xl:col-start-auto">
                   <Search className="mr-2 h-4 w-4" />
-                  Buscar
+                  Pesquisar
                 </Button>
               </form>
             </CardContent>
