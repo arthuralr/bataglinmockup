@@ -55,7 +55,7 @@ export function Header() {
     )}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <nav className="hidden md:flex items-center gap-6">
-            <Button asChild variant="outline" className="border-white text-black bg-white/80 hover:bg-white">
+            <Button asChild variant="outline" className="border-white text-primary-foreground bg-primary hover:bg-primary/90">
                 <Link
                     href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
                     target="_blank"
