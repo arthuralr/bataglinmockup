@@ -2,7 +2,7 @@
 
 import React from "react"
 import Link from "next/link"
-import { Menu, Home } from "lucide-react"
+import { Menu, Home, Phone } from "lucide-react"
 import { usePathname } from 'next/navigation'
 import Image from "next/image"
 
@@ -11,16 +11,33 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
 
 const navLinks = [
-  { href: "/", label: "Início" },
   { href: "/imoveis", label: "Imóveis" },
   { href: "/sobre-nos", label: "Sobre Nós" },
   { href: "/contato", label: "Contato" },
   { href: "/admin/gerador-descricao", label: "Gerador AI" },
 ];
 
+const WhatsAppIcon = () => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+  </svg>
+);
+
+
 export function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false)
   const pathname = usePathname();
+  const phoneNumber = "555185632393";
+  const message = "Olá! Tenho interesse em um dos seus imóveis.";
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +48,11 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const whatsAppButtonClasses = cn(
+    "text-sm font-medium transition-colors flex items-center gap-2",
+    isScrolled || pathname !== '/' ? "text-foreground hover:text-primary" : "text-white hover:text-primary"
+  );
+
   return (
     <header className={cn(
       "sticky top-0 z-50 transition-all duration-300",
@@ -38,6 +60,16 @@ export function Header() {
     )}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <nav className="hidden md:flex items-center gap-6">
+            <Link
+                href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={whatsAppButtonClasses}
+                aria-label="Fale conosco no WhatsApp"
+            >
+                <WhatsAppIcon />
+                <span>(51) 8563-2393</span>
+            </Link>
           {navLinks.map((link) => (
             <Link 
               key={link.href} 
@@ -74,6 +106,16 @@ export function Header() {
                   </div>
                   <span className="text-xl font-bold font-headline">Bataglin Imóveis</span>
                 </Link>
+                <Link 
+                  href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lg font-medium hover:text-primary transition-colors flex items-center gap-2"
+                >
+                    <WhatsAppIcon />
+                    (51) 8563-2393
+                </Link>
+                <Link href="/" className="text-lg font-medium hover:text-primary transition-colors">Início</Link>
                 {navLinks.map((link) => (
                   <Link key={link.href} href={link.href} className="text-lg font-medium hover:text-primary transition-colors">
                     {link.label}
