@@ -55,7 +55,7 @@ export function Header() {
         
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             <Link href="/" className="flex items-center gap-2">
-            <Image src="/logo.svg" width={180} height={50} alt="Bataglin Imóveis Logo" />
+            <Image src="/logo.png" width={180} height={50} alt="Bataglin Imóveis Logo" />
             </Link>
         </div>
 
