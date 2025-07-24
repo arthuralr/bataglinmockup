@@ -15,12 +15,12 @@ export default function Home() {
     <>
       <section className="relative h-[60vh] min-h-[400px] w-full">
         <Image
-          src="https://placehold.co/1920x1080"
-          alt="Modern house exterior"
+          src="/capa.jpg"
+          alt="Família olhando para casa nova"
           layout="fill"
           objectFit="cover"
           className="absolute inset-0 z-0"
-          data-ai-hint="modern house"
+          data-ai-hint="family house"
         />
         <div className="absolute inset-0 bg-black/60 z-10" />
         <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-white p-4">
