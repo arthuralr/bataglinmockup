@@ -28,7 +28,7 @@ export function WhatsAppButton() {
       href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 group"
+      className="fixed top-24 left-6 z-50 group"
       aria-label="Fale conosco no WhatsApp"
     >
       <div className="flex items-center justify-center bg-primary text-primary-foreground rounded-full shadow-lg p-4 transition-all duration-300 ease-in-out hover:bg-primary/90">
