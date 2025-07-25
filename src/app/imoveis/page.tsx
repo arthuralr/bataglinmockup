@@ -10,11 +10,29 @@ import { Button } from '@/components/ui/button';
 import { SlidersHorizontal } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
+const formatCurrency = (value: number) => {
+  return new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(value);
+};
+
+const parseCurrency = (value: string): number => {
+    const onlyDigits = value.replace(/\D/g, '');
+    return Number(onlyDigits);
+};
+
+
 export default function ImoveisPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [propertyType, setPropertyType] = useState('all');
   const [bedrooms, setBedrooms] = useState('all');
   const [priceRange, setPriceRange] = useState([0, 3000000]);
+  const [minPriceInput, setMinPriceInput] = useState('');
+  const [maxPriceInput, setMaxPriceInput] = useState('');
+
 
   const filteredProperties = useMemo(() => {
     return properties.filter((property) => {
@@ -33,15 +51,18 @@ export default function ImoveisPage() {
     });
   }, [searchTerm, propertyType, bedrooms, priceRange]);
   
-  // Handlers for min and max price inputs
-  const handleMinPriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value === '' ? 0 : parseInt(e.target.value, 10);
-    setPriceRange([value, priceRange[1]]);
-  };
   
-  const handleMaxPriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value === '' ? 3000000 : parseInt(e.target.value, 10);
-    setPriceRange([priceRange[0], value]);
+  const handlePriceChange = (e: React.ChangeEvent<HTMLInputElement>, type: 'min' | 'max') => {
+    const rawValue = e.target.value;
+    const numericValue = parseCurrency(rawValue);
+
+    if (type === 'min') {
+        setMinPriceInput(rawValue === '' ? '' : formatCurrency(numericValue));
+        setPriceRange([numericValue, priceRange[1]]);
+    } else {
+        setMaxPriceInput(rawValue === '' ? '' : formatCurrency(numericValue));
+        setPriceRange([priceRange[0], numericValue || 3000000]);
+    }
   };
 
 
@@ -96,11 +117,23 @@ export default function ImoveisPage() {
             </div>
             <div>
                 <label htmlFor="min-price" className="block text-sm font-medium mb-1">Preço Mínimo</label>
-                <Input id="min-price" type="number" placeholder="R$ 0" onChange={handleMinPriceChange} step="50000" />
+                <Input 
+                  id="min-price" 
+                  type="text" 
+                  placeholder="R$ 0" 
+                  value={minPriceInput}
+                  onChange={(e) => handlePriceChange(e, 'min')} 
+                />
             </div>
             <div>
                 <label htmlFor="max-price" className="block text-sm font-medium mb-1">Preço Máximo</label>
-                <Input id="max-price" type="number" placeholder="R$ 3.000.000+" onChange={handleMaxPriceChange} step="50000" />
+                <Input 
+                  id="max-price" 
+                  type="text" 
+                  placeholder="R$ 3.000.000+" 
+                  value={maxPriceInput}
+                  onChange={(e) => handlePriceChange(e, 'max')}
+                 />
             </div>
           </div>
         </CardContent>
