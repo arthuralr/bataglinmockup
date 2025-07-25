@@ -62,8 +62,8 @@ export function Header() {
 
             {/* Right: Social Icons */}
             <div className="flex-1 flex justify-end items-center gap-3">
-              <a href="#" className="text-gray-800 hover:text-primary" aria-label="Instagram"><Instagram size={24}/></a>
-              <a href="#" className="text-gray-800 hover:text-primary" aria-label="Facebook"><Facebook size={24}/></a>
+              <a href="https://www.instagram.com/paulo.bataglin_assessoria/?hl=pt-br" target="_blank" rel="noopener noreferrer" className="text-gray-800 hover:text-primary" aria-label="Instagram"><Instagram size={24}/></a>
+              <a href="https://www.facebook.com/paulobataglinconsultoriamobiliaria" target="_blank" rel="noopener noreferrer" className="text-gray-800 hover:text-primary" aria-label="Facebook"><Facebook size={24}/></a>
             </div>
         </div>
       </div>

@@ -17,8 +17,8 @@ export function Footer() {
               Realizando sonhos, construindo lares.
             </p>
             <div className="flex gap-4 mt-2">
-              <Link href="#" className="text-muted-foreground hover:text-primary"><Facebook /></Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary"><Instagram /></Link>
+              <Link href="https://www.facebook.com/paulobataglinconsultoriamobiliaria" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Facebook /></Link>
+              <Link href="https://www.instagram.com/paulo.bataglin_assessoria/?hl=pt-br" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Instagram /></Link>
               <Link href="#" className="text-muted-foreground hover:text-primary"><Linkedin /></Link>
             </div>
           </div>
