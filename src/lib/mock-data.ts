@@ -6,7 +6,7 @@ export const properties: Property[] = [
     title: 'Casa Parque Granja Esperança',
     type: 'Casa',
     description: 'Bataglin imóveis vende\n\nCasa 2 dormitórios\n\nTerreno 120m² 6x20\n\nCasa 67 m²\n\nCom área gourmet nos fundos , com churrasqueira, fogão, pia , mesa e banheiro.\n\nAs informações estão sujeitas a alterações. Consulte o corretor responsável.',
-    price: 750000,
+    price: 228000,
     location: 'Rua Maria Ana da Costa - Parque Granja Esperança - Cachoeirinha/RS - 94960-800',
     bedrooms: 2,
     bathrooms: 2, // 1 na casa + 1 na área gourmet
