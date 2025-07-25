@@ -34,11 +34,13 @@ export const properties: Property[] = [
     bathrooms: 1, // Assumindo 1 banheiro, pode ser ajustado
     area: 0, // Área não informada, pode ser ajustada
     images: [
-        '/apartamento/foto1.jpg',
-        '/apartamento/foto2.jpg',
-        '/apartamento/foto3.jpg',
-        '/apartamento/foto4.jpg',
-        '/apartamento/foto5.jpg'
+      '/apartamento/capa.jpg',
+      '/apartamento/img1.jpg',
+      '/apartamento/img2.jpg',
+      '/apartamento/img3.jpg',
+      '/apartamento/img4.jpg',
+      '/apartamento/img5.jpg',
+      '/apartamento/img6.jpg'
     ],
     features: ['1 Vaga de Garagem', 'Mobiliado', 'Piscina no Condomínio', 'Salão de Festas', 'Playground', 'Quiosques com Churrasqueira'],
     featured: true,
