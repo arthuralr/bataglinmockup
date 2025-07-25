@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export function WhatsAppButton() {
   const phoneNumber = "555185632393";
-  const message = encodeURIComponent("Olá! Tenho interesse em um dos seus imóveis e gostaria de mais informações.");
+  const message = encodeURIComponent("olá estamos disponiveis");
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
   return (
