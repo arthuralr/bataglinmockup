@@ -15,7 +15,7 @@ export function WhatsAppButton() {
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
   return (
-    <TooltipProvider>
+    <TooltipProvider delayDuration={100}>
       <Tooltip>
         <TooltipTrigger asChild>
           <Link 
@@ -28,8 +28,10 @@ export function WhatsAppButton() {
             <Image src="/logowasap.png" alt="WhatsApp" width={32} height={32} />
           </Link>
         </TooltipTrigger>
-        <TooltipContent side="left" className="bg-background text-foreground">
-          <p>Olá, estamos disponíveis!</p>
+        <TooltipContent side="top" align="center" className="relative bg-background text-foreground border border-border shadow-md rounded-lg px-4 py-2">
+            <p>Olá, estamos disponíveis!</p>
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-[-9px] w-0 h-0 border-x-8 border-x-transparent border-t-[10px] border-t-background" />
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-[-11px] w-0 h-0 border-x-8 border-x-transparent border-t-[10px] border-t-border" style={{zIndex: -1}} />
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
