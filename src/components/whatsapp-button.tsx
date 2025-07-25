@@ -1,19 +1,7 @@
 "use client"
 
 import Link from 'next/link';
-
-// Using an inline SVG for the WhatsApp icon as it's not in lucide-react
-const WhatsAppIcon = () => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-    >
-      <path d="M16.75 13.96c.25.13.43.2.5.28.08.08.13.18.15.25.03.08.03.18 0 .28-.03.1-.08.2-.13.28-.05.05-.13.13-.2.18-.08.05-.18.1-.28.13-.08.03-.18.03-.28 0a2.4 2.4 0 0 1-1.2-.45 4.8 4.8 0 0 1-2.03-1.63c-.5-.68-.8-1.35-1-2.03-.18-.6-.28-1.18-.3-1.75 0-.05 0-.1.03-.13.03-.03.05-.05.08-.08.03-.03.05-.05.1-.05.08 0 .15.03.2.05.05.03.1.08.13.13.03.05.05.1.08.13.03.05.03.1.03.18a.42.42 0 0 0 .1.28.6.6 0 0 0 .2.23c.1.08.2.13.28.15.1.03.18.03.25 0 .1-.03.18-.08.23-.13.05-.05.1-.1.13-.15s.05-.1.08-.15c.03-.05.03-.1.03-.13 0-.05-.03-.1-.05-.13a.4.4 0 0 0-.15-.13.2.2 0 0 0-.13-.05.34.34 0 0 0-.15 0c-.05.03-.1.05-.13.08-.03.03-.05.05-.08.08-.03.03-.05.05-.08.05h-.08a.52.52 0 0 0-.28-.05c-.1 0-.2.03-.28.05a1 1 0 0 0-.28.18 1.4 1.4 0 0 0-.28.28.85.85 0 0 0-.15.35c-.03.1-.05.23-.05.35 0 .25.05.5.13.75.08.25.2.5.35.75.15.25.35.5.55.78.2.25.45.53.7.78.25.25.5.48.78.7.25.2.5.35.75.5.25.15.5.28.75.35.25.08.5.13.75.15.25.03.5.05.75.05.25 0 .5-.05.7-.13a1.4 1.4 0 0 0 .5-.4.85.85 0 0 0 .2-.53v-.08a.52.52 0 0 0-.05-.28.87.87 0 0 0-.13-.25c-.05-.08-.13-.15-.2-.23-.08-.08-.18-.13-.28-.15-.1-.03-.2 0-.28.03a.4.4 0 0 0-.2.13c-.05.08-.1.15-.13.23-.03.08-.05.15-.05.23 0 .05.03.1.05.13.03.03.05.05.08.08.03.03.05.05.05.08h.08c.05 0 .1-.03.13-.05s.05-.05.08-.08a.3.3 0 0 0 .05-.13v-.05z m4.58-10.23a8.38 8.38 0 0 0-3.8-.9h-.5a8.48 8.48 0 0 0-8 8v.5a8.38 8.38 0 0 0 .9 3.8l-1.9 5.7 5.7-1.9a8.38 8.38 0 0 0 3.8.9 8.5 8.5 0 0 0 7.6-4.7 8.38 8.38 0 0 0 .9-3.8v-.5a8.48 8.48 0 0 0-8-8Z"/>
-    </svg>
-);
+import Image from 'next/image';
 
 export function WhatsAppButton() {
   const phoneNumber = "555185632393";
@@ -25,10 +13,10 @@ export function WhatsAppButton() {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#1DAE50] transition-colors duration-300 flex items-center justify-center"
+      className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-3 rounded-full shadow-lg hover:bg-[#1DAE50] transition-colors duration-300 flex items-center justify-center"
       aria-label="Fale conosco no WhatsApp"
     >
-      <WhatsAppIcon />
+      <Image src="/logowasap.png" alt="WhatsApp" width={32} height={32} />
     </Link>
   );
 }
