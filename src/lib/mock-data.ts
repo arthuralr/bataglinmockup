@@ -3,16 +3,22 @@ import type { Property } from './types';
 export const properties: Property[] = [
   {
     id: '1',
-    title: 'Apartamento Moderno no Centro',
-    type: 'Apartamento',
-    description: 'Este apartamento moderno oferece uma vida de luxo e conveniência no coração da cidade. Com acabamentos de alta qualidade, uma cozinha gourmet e vistas deslumbrantes, é o lugar perfeito para chamar de lar.',
+    title: 'Casa Parque Granja Esperança',
+    type: 'Casa',
+    description: 'Bataglin imóveis vende\n\nCasa 2 dormitórios\n\nTerreno 120m² 6x20\n\nCasa 67 m²\n\nCom área gourmet nos fundos , com churrasqueira, fogão, pia , mesa e banheiro.\n\nAs informações estão sujeitas a alterações. Consulte o corretor responsável.',
     price: 750000,
-    location: 'Centro',
+    location: 'Parque Granja Esperança - Cachoeirinha/RS',
     bedrooms: 2,
-    bathrooms: 2,
-    area: 95,
-    images: ['https://placehold.co/800x600', 'https://placehold.co/800x600', 'https://placehold.co/800x600'],
-    features: ['Cozinha Gourmet', 'Varanda com Vista', 'Academia no Prédio', 'Piscina'],
+    bathrooms: 2, // 1 na casa + 1 na área gourmet
+    area: 67,
+    images: [
+        '/casaparquegranjaesperanca/1.jpg',
+        '/casaparquegranjaesperanca/2.jpg',
+        '/casaparquegranjaesperanca/3.jpg',
+        '/casaparquegranjaesperanca/4.jpg',
+        '/casaparquegranjaesperanca/5.jpg',
+    ],
+    features: ['Área Gourmet com Churrasqueira', '2 Dormitórios', 'Vaga de Garagem'],
     featured: true,
   },
   {
