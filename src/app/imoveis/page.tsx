@@ -10,13 +10,17 @@ import { Button } from '@/components/ui/button';
 import { SlidersHorizontal } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
-const formatCurrency = (value: number) => {
+const formatCurrency = (value: string) => {
+  if (!value) return '';
+  const numericValue = value.replace(/\D/g, '');
+  if (numericValue === '') return '';
+
   return new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL',
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
-  }).format(value);
+  }).format(Number(numericValue));
 };
 
 const parseCurrency = (value: string): number => {
@@ -29,12 +33,13 @@ export default function ImoveisPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [propertyType, setPropertyType] = useState('all');
   const [bedrooms, setBedrooms] = useState('all');
-  const [priceRange, setPriceRange] = useState([0, 3000000]);
   const [minPriceInput, setMinPriceInput] = useState('');
   const [maxPriceInput, setMaxPriceInput] = useState('');
 
-
   const filteredProperties = useMemo(() => {
+    const minPrice = minPriceInput ? parseCurrency(minPriceInput) : 0;
+    const maxPrice = maxPriceInput ? parseCurrency(maxPriceInput) : Infinity;
+
     return properties.filter((property) => {
       const matchesSearch =
         property.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -45,23 +50,21 @@ export default function ImoveisPage() {
       
       const matchesBedrooms = bedrooms === 'all' || property.bedrooms >= parseInt(bedrooms);
 
-      const matchesPrice = property.price >= priceRange[0] && property.price <= priceRange[1];
+      const matchesPrice = property.price >= minPrice && property.price <= maxPrice;
 
       return matchesSearch && matchesType && matchesBedrooms && matchesPrice;
     });
-  }, [searchTerm, propertyType, bedrooms, priceRange]);
+  }, [searchTerm, propertyType, bedrooms, minPriceInput, maxPriceInput]);
   
   
   const handlePriceChange = (e: React.ChangeEvent<HTMLInputElement>, type: 'min' | 'max') => {
     const rawValue = e.target.value;
-    const numericValue = parseCurrency(rawValue);
+    const formattedValue = formatCurrency(rawValue);
 
     if (type === 'min') {
-        setMinPriceInput(rawValue === '' ? '' : formatCurrency(numericValue));
-        setPriceRange([numericValue, priceRange[1]]);
+        setMinPriceInput(formattedValue);
     } else {
-        setMaxPriceInput(rawValue === '' ? '' : formatCurrency(numericValue));
-        setPriceRange([priceRange[0], numericValue || 3000000]);
+        setMaxPriceInput(formattedValue);
     }
   };
 
