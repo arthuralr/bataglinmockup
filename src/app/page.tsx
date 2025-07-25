@@ -35,10 +35,10 @@ export default function Home() {
 
       <section className="bg-background -mt-20 relative z-30">
         <div className="container mx-auto px-4 md:px-6">
-          <Card className="w-full max-w-5xl mx-auto p-4 sm:p-6 shadow-lg">
+          <Card className="w-full max-w-5xl mx-auto p-6 sm:p-8 shadow-lg">
             <CardContent className="p-0">
-              <form className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 lg:gap-6 items-end">
-                <div className="lg:col-span-2 xl:col-span-1">
+              <form className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-end">
+                <div>
                   <label htmlFor="negocio" className="block text-sm font-medium mb-1 text-foreground">Negócio</label>
                   <Select defaultValue="comprar">
                     <SelectTrigger id="negocio" className="w-full">
@@ -76,7 +76,7 @@ export default function Home() {
                   <Input id="city" placeholder="Digite a cidade" />
                 </div>
 
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="min-price" className="block text-sm font-medium mb-1 text-foreground">Valor Mínimo</label>
                       <Input id="min-price" placeholder="R$ 0" type="text" />
@@ -87,7 +87,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <Button type="submit" className="w-full h-10 bg-primary hover:bg-accent hover:text-accent-foreground text-primary-foreground md:col-start-2 lg:col-start-auto xl:col-start-auto">
+                <Button type="submit" className="w-full h-10 bg-primary hover:bg-accent hover:text-accent-foreground text-primary-foreground lg:col-span-4">
                   <Search className="mr-2 h-4 w-4" />
                   Pesquisar
                 </Button>
