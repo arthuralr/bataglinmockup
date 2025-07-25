@@ -1,3 +1,4 @@
+
 import type { Property } from './types';
 
 export const properties: Property[] = [
@@ -83,16 +84,24 @@ export const properties: Property[] = [
   },
   {
     id: '5',
-    title: 'Apartamento Aconchegante Perto do Parque',
-    type: 'Apartamento',
-    description: 'Ideal para jovens casais ou solteiros, este apartamento está localizado a poucos passos do parque da cidade. Possui uma planta inteligente e uma varanda charmosa.',
-    price: 550000,
-    location: 'Vila Madalena',
-    bedrooms: 1,
+    title: 'Casa em Morada do Bosque, Cachoeirinha/RS',
+    type: 'Casa',
+    description: 'Procurando uma casa aconchegante para chamar de lar? Esta é a opção perfeita para você! Com 3 dormitórios bem distribuídos, garagem coberta para dois veículos e mais de 70m² de área construída total , este imóvel está pronto para receber sua família com todo o conforto que vocês merecem.\n\nAlém disso, o imóvel conta com ar condicionado para os dias quentes de verão, churrasqueira e fogão campeiro em um espaço gourmet para reunir os amigos e compartilhar momentos com as pessoas que você ama.\n\nE a localização é privilegiada, próximo a tudo o que você precisa: supermercado, padaria, farmácia, banco 24hs, praça, praça, transporte público, rodovia e muito mais.\n\nLocalizada em um dos bairros mais procurados da cidade, o Morada do Bosque destaca-se por ser um local tranquilo e com ótima acessibilidade, esta casa é o lugar perfeito para você construir momentos inesquecíveis com sua família.\n\nNão perca essa oportunidade de conhecer o imóvel e muitos outros detalhes que irão te surpreender.\n\nEntre em contato conosco agora mesmo através do formulário de contato do site ou diretamente pelo whatssap.\n\nEstamos ansiosos para te ajudar a conquistar seu novo lar!',
+    price: 264900,
+    location: 'Morada do Bosque - Cachoeirinha/RS',
+    bedrooms: 3,
     bathrooms: 1,
-    area: 60,
-    images: ['https://placehold.co/800x600', 'https://placehold.co/800x600'],
-    features: ['Perto do Parque', 'Cozinha Americana', 'Varanda', 'Condomínio com Lazer'],
+    area: 70,
+    images: [
+      '/casabosque/capa.jpg',
+      '/casabosque/img2.jpg',
+      '/casabosque/img3.jpg',
+      '/casabosque/img4.jpg',
+      '/casabosque/img5.jpg',
+      '/casabosque/img6.jpg',
+      '/casabosque/img7.jpg'
+    ],
+    features: ['Garagem coberta para 2 carros', 'Ar Condicionado', 'Espaço Gourmet com Churrasqueira', 'Fogão Campeiro'],
     featured: true,
   },
   {
