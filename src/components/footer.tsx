@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Home, Facebook, Instagram, Linkedin } from "lucide-react"
+import { Home, Facebook, Instagram } from "lucide-react"
 
 export function Footer() {
   return (
@@ -19,7 +19,6 @@ export function Footer() {
             <div className="flex gap-4 mt-2">
               <Link href="https://www.facebook.com/paulobataglinconsultoriamobiliaria" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Facebook /></Link>
               <Link href="https://www.instagram.com/paulo.bataglin_assessoria/?hl=pt-br" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Instagram /></Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary"><Linkedin /></Link>
             </div>
           </div>
           <div>
