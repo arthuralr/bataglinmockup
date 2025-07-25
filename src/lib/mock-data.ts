@@ -12,11 +12,13 @@ export const properties: Property[] = [
     bathrooms: 2, // 1 na casa + 1 na área gourmet
     area: 67,
     images: [
-        '/casaparquegranjaesperanca/1.jpg',
-        '/casaparquegranjaesperanca/2.jpg',
-        '/casaparquegranjaesperanca/3.jpg',
-        '/casaparquegranjaesperanca/4.jpg',
-        '/casaparquegranjaesperanca/5.jpg',
+        '/casaparquegranjaesperanca/capaprincipal.jpg',
+        '/casaparquegranjaesperanca/foto1.jpg',
+        '/casaparquegranjaesperanca/foto2.jpg',
+        '/casaparquegranjaesperanca/foto3.jpg',
+        '/casaparquegranjaesperanca/foto4.jpg',
+        '/casaparquegranjaesperanca/foto5.jpg',
+        '/casaparquegranjaesperanca/foto6.jpg',
     ],
     features: ['Área Gourmet com Churrasqueira', '2 Dormitórios', 'Vaga de Garagem'],
     featured: true,
