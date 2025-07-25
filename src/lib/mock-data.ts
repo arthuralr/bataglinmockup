@@ -31,8 +31,8 @@ export const properties: Property[] = [
     price: 168000,
     location: 'Porto Gravataí - São Jerônimo - Gravataí/RS',
     bedrooms: 2,
-    bathrooms: 1, // Assumindo 1 banheiro, pode ser ajustado
-    area: 0, // Área não informada, pode ser ajustada
+    bathrooms: 1,
+    area: 0, 
     images: [
       '/apartamento/capa.jpg',
       '/apartamento/img1.jpg',
@@ -47,16 +47,24 @@ export const properties: Property[] = [
   },
   {
     id: '3',
-    title: 'Cobertura Duplex com Vista Panorâmica',
-    type: 'Cobertura',
-    description: 'Viva no topo do mundo nesta cobertura duplex exclusiva. Com uma piscina privativa, terraço amplo e vistas panorâmicas da cidade, esta propriedade é a definição de luxo urbano.',
-    price: 2500000,
-    location: 'Bairro Alto',
+    title: 'Apartamento 3 Dormitórios à Venda',
+    type: 'Apartamento',
+    description: 'LANÇAMENTO EM CACHOEIRINHA!\n\nImóvel diferenciado com 3 dormitórios e 76 m² no bairro Vista Alegre\nO apartamento possui uma suíte, banheiro social, sala de estar, jantar, lavanderia e cozinha integrada com os ambientes sociais.\n\nA sacada com churrasqueira também é um diferencial, além de elevador e vaga de garagem coberta.\n\nA localização é excelente, há 650 metros da Avenida General Flores da Cunha, próximo ao Shopping do Vale, Carrefour, Faculdade Cesuca, Sessto Atacadão, Hospital Padre Geremias, tudo a poucos metros do imóvel.\n\nAceita financiamento bancário e FGTS\n\nEntrada facilitada pela construtora\n\nPrevisão de entrega Junho 2024\n\nEntre em contato conosco e traga a sua proposta!\n\nAs informações estão sujeitas a alterações. Consulte o corretor responsável.',
+    price: 350000, // Preço não informado, adicionei um placeholder
+    location: 'Rua Caruaru, 160 - Vila Vista Alegre - Cachoeirinha/RS - 94945-120',
     bedrooms: 3,
-    bathrooms: 4,
-    area: 300,
-    images: ['https://placehold.co/800x600', 'https://placehold.co/800x600', 'https://placehold.co/800x600'],
-    features: ['Piscina Privativa', 'Terraço Gourmet', 'Vista Panorâmica', 'Elevador Privativo'],
+    bathrooms: 2, // 1 suíte + 1 social
+    area: 76,
+    images: [
+        '/apartamento3dormitoriiod/capa.jpg',
+        '/apartamento3dormitoriiod/imagem1.jpg',
+        '/apartamento3dormitoriiod/imagem2.jpg',
+        '/apartamento3dormitoriiod/imagem3.jpg',
+        '/apartamento3dormitoriiod/imagem4.jpg',
+        '/apartamento3dormitoriiod/imagem5.jpg',
+        '/apartamento3dormitoriiod/imagem6.jpg'
+    ],
+    features: ['3 Dormitórios (1 suíte)', 'Vaga de garagem coberta', 'Elevador', 'Sacada com Churrasqueira'],
     featured: true,
   },
   {
