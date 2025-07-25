@@ -25,16 +25,22 @@ export const properties: Property[] = [
   },
   {
     id: '2',
-    title: 'Casa Espaçosa com Jardim',
-    type: 'Casa',
-    description: 'Uma casa familiar encantadora com um jardim espaçoso, perfeita para entretenimento ao ar livre. Possui uma suíte master, quartos amplos e uma sala de estar aconchegante com lareira.',
-    price: 1200000,
-    location: 'Jardim das Flores',
-    bedrooms: 4,
-    bathrooms: 3,
-    area: 250,
-    images: ['https://placehold.co/800x600', 'https://placehold.co/800x600', 'https://placehold.co/800x600'],
-    features: ['Jardim Amplo', 'Churrasqueira', 'Lareira', 'Suíte Master com Closet'],
+    title: 'Apartamento em Porto Gravataí',
+    type: 'Apartamento',
+    description: 'Ótima Localização e praticidade\n\nBuscando uma moradia com ótima localização, aqui está a oportunidade pra você.\n\nEste ótimo apto. com 2 dormitórios, mobiliado e condominio com toda a infraestrutura, um belíssimo salão de festas, piscinas adulto e infantil, playground, brinquedoteca e quiosques com churrasqueiras.\n\nLocalizado em uma região privilegiada, junto a av Dorival C. L. de Oliveira na pda 72, com uma rica infraestrutura comercial onde você vai ter farmácias, mercado, bazar, lotérica, ponto de ônibus há poucos metros de distância.\n\nPraticidade, comodidade e segurança são as palavras chaves que definem esse imóvel, sem falar no ótimo custo benefício.\n\nESPERAMOS VOCÊ PARA CONHECER ESSA OPORTUNIDADE!!!\n\nAs informações estão sujeitas a alterações. Consulte o corretor responsável.',
+    price: 168000,
+    location: 'Porto Gravataí - São Jerônimo - Gravataí/RS',
+    bedrooms: 2,
+    bathrooms: 1, // Assumindo 1 banheiro, pode ser ajustado
+    area: 0, // Área não informada, pode ser ajustada
+    images: [
+        '/apartamento/foto1.jpg',
+        '/apartamento/foto2.jpg',
+        '/apartamento/foto3.jpg',
+        '/apartamento/foto4.jpg',
+        '/apartamento/foto5.jpg'
+    ],
+    features: ['1 Vaga de Garagem', 'Mobiliado', 'Piscina no Condomínio', 'Salão de Festas', 'Playground', 'Quiosques com Churrasqueira'],
     featured: true,
   },
   {
