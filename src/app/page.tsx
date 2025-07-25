@@ -37,7 +37,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <Card className="w-full max-w-5xl mx-auto p-4 sm:p-6 shadow-lg">
             <CardContent className="p-0">
-              <form className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 items-end">
+              <form className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 lg:gap-6 items-end">
                 <div className="lg:col-span-2 xl:col-span-1">
                   <label htmlFor="negocio" className="block text-sm font-medium mb-1 text-foreground">Negócio</label>
                   <Select defaultValue="comprar">
