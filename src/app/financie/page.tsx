@@ -29,19 +29,19 @@ export default function FinanciePage() {
               <div className="space-y-4">
                 <div>
                   <Label htmlFor="valor-imovel">Valor do Imóvel</Label>
-                  <Input id="valor-imovel" type="number" placeholder="R$ 300.000" />
+                  <Input id="valor-imovel" type="text" placeholder="R$ 300.000" />
                 </div>
                 <div>
                   <Label htmlFor="valor-entrada">Valor da Entrada</Label>
-                  <Input id="valor-entrada" type="number" placeholder="R$ 60.000" />
+                  <Input id="valor-entrada" type="text" placeholder="R$ 60.000" />
                 </div>
                  <div>
                   <Label htmlFor="prazo">Prazo (em anos)</Label>
-                  <Input id="prazo" type="number" placeholder="30" />
+                  <Input id="prazo" type="text" placeholder="30" />
                 </div>
                  <div>
                   <Label htmlFor="renda">Renda Familiar Bruta</Label>
-                  <Input id="renda" type="number" placeholder="R$ 8.000" />
+                  <Input id="renda" type="text" placeholder="R$ 8.000" />
                 </div>
               </div>
                <div className="space-y-4">

@@ -126,9 +126,9 @@ export function AIDescriptionGeneratorForm() {
               />
             </div>
             <div className="grid md:grid-cols-3 gap-6">
-              <FormField control={form.control} name="numberOfBedrooms" render={({ field }) => ( <FormItem><FormLabel>Quartos</FormLabel><FormControl><Input type="number" {...field} /></FormControl><FormMessage /></FormItem> )} />
-              <FormField control={form.control} name="numberOfBathrooms" render={({ field }) => ( <FormItem><FormLabel>Banheiros</FormLabel><FormControl><Input type="number" {...field} /></FormControl><FormMessage /></FormItem> )} />
-              <FormField control={form.control} name="squareFootage" render={({ field }) => ( <FormItem><FormLabel>Área (m²)</FormLabel><FormControl><Input type="number" {...field} /></FormControl><FormMessage /></FormItem> )} />
+              <FormField control={form.control} name="numberOfBedrooms" render={({ field }) => ( <FormItem><FormLabel>Quartos</FormLabel><FormControl><Input type="text" {...field} /></FormControl><FormMessage /></FormItem> )} />
+              <FormField control={form.control} name="numberOfBathrooms" render={({ field }) => ( <FormItem><FormLabel>Banheiros</FormLabel><FormControl><Input type="text" {...field} /></FormControl><FormMessage /></FormItem> )} />
+              <FormField control={form.control} name="squareFootage" render={({ field }) => ( <FormItem><FormLabel>Área (m²)</FormLabel><FormControl><Input type="text" {...field} /></FormControl><FormMessage /></FormItem> )} />
             </div>
             <FormField
               control={form.control}

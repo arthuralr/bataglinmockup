@@ -79,11 +79,11 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-2">
                     <div>
                       <label htmlFor="min-price" className="block text-sm font-medium mb-1 text-foreground">Valor Mínimo</label>
-                      <Input id="min-price" placeholder="R$ 0" type="number" />
+                      <Input id="min-price" placeholder="R$ 0" type="text" />
                     </div>
                      <div>
                       <label htmlFor="max-price" className="block text-sm font-medium mb-1 text-foreground">Valor Máximo</label>
-                      <Input id="max-price" placeholder="R$ 1.000.000+" type="number" />
+                      <Input id="max-price" placeholder="R$ 1.000.000+" type="text" />
                     </div>
                 </div>
 
